@@ -101,6 +101,9 @@ border-radius: 20px;
 margin-top: 20px;
 transition: background-color 0.3s ease, color 0.3s ease;
 }
+.btn-catalog{
+  visibility: hidden;
+}
 
 .remove-btn{
   background-color: var(--btnclor);

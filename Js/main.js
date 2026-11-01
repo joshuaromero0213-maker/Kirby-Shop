@@ -29,19 +29,19 @@ const productsData = {
     image: 'img/controller.jpg',
     description: 'Kirby controller perfect for holding your gaming controller.'
   },
-  'Mini Kirby': {
+  'llavero-kirby': {
     name: 'Llavero Peluche Kirby',
     price: '$19.99',
     image: 'img/llavero.jpeg',
     description: 'Mini Kirby plush with keychain attachment.'
   },
-  'Kirby': {
+  'mesa-kirby': {
     name: 'Lámpara Mesa Kirby',
     price: '$19.99',
     image: 'img/mesa.webp',
     description: 'Kirby-themed table lamp with adjustable brightness and color settings.'
   },
-  'Kirby Key Ring': {
+  'llave-kirby': {
     name: 'Llavero Metal Kirby',
     price: '$19.99',
     image: 'img/llave.jpeg',

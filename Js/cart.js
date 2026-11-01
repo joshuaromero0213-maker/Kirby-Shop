@@ -20,7 +20,7 @@ const btnCheckout = document.getElementById('checkout-button');
 const carritoIds = JSON.parse(localStorage.getItem('kirby_cart')) || [];
 let totalAcomulado =0;
 if(carritoIds.length === 0){
-    contenedorItems.innerHTML='<p style="text-align:center;">Tu carrito está vacío 🛒</p>';
+    contenedorItems.innerHTML='<p style="text-align:center;">Your cart is empty 🛒</p>';
     elementoTotal.textContent = '0.00';
 }else{
     contenedorItems.innerHTML = '';
@@ -58,7 +58,7 @@ if(carritoIds.length === 0){
     if (btnCheckout) {
         btnCheckout.addEventListener('click', () => {
             if(carritoIds.length === 0){
-                alert('Tu carrito está vacío. Agrega productos antes de proceder al pago.');
+                alert('TYour cart is empty. Please add items before proceeding to checkout.');
                 return;
             }
             localStorage.setItem('kirby_total_final', totalAcomulado.toFixed(2));
