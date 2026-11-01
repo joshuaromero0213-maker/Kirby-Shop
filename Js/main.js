@@ -2,49 +2,49 @@ const productsData = {
   'kirby-classic': {
     name: 'Kirby-classic',
     price: '$9.99',
-    image: '/img/KXC2-N4N1475293-medium_w640_h480_q75-peluchekirby1-1705939067.png',
+    image: 'img/KXC2-N4N1475293-medium_w640_h480_q75-peluchekirby1-1705939067.png',
     description: 'Peluche clásico de Kirby de material ultrasuave, ideal para abrazar o decorar tu espacio gamer.'
   },
   'kirby': {
     name: 'Peluche Kirby Durmiendo',
     price: '$4.99',
-    image: '/img/ChatGPT-Image-Sep-25-2026-04_35_26-PM.png',
+    image: 'img/ChatGPT-Image-Sep-25-2026-04_35_26-PM.png',
     description: 'Edición especial de Kirby durmiendo placenteramente. Tamaño compacto para escritorio.'
   },
   'sleeping-kirby': {
     name: 'Peluche Kirby Mini',
     price: '$9.99',
-    image: '/img/images.jpeg',
+    image: 'img/images.jpeg',
     description: 'Versión mini coleccionable de alta densidad, resistente a caídas y muy suave al tacto.'
   },
   'biggie-kirby': {
     name: 'Peluche Kirby Gigante',
     price: '$19.99',
-    image: '/img/biggie.jpeg',
+    image: 'img/biggie.jpeg',
     description: 'Edición Biggie de gran tamaño. Funciona perfectamente como cojín o pieza central de colección.'
   },
   'kirby-controller': {
     name: 'Soporte Kirby Controller',
     price: '$44.99',
-    image: '/img/controller.jpeg',
+    image: 'img/controller.jpeg',
     description: 'Soporte funcional diseñado para sostener tus mandos de consola o smartphone con los brazos de Kirby.'
   },
   'llavero-kirby': {
     name: 'Llavero Peluche Kirby',
     price: '$19.99',
-    image: '/img/llavero.jpeg',
+    image: 'img/llavero.jpeg',
     description: 'Llavero con gancho metálico reforzado y minipeluche incorporado.'
   },
   'mesa-kirby': {
     name: 'Lámpara Mesa Kirby',
     price: '$19.99',
-    image: '/img/mesa.webp',
+    image: 'img/mesa.webp',
     description: 'Lámpara nocturna tenue con figura de Kirby, luz LED de bajo consumo recargable por USB.'
   },
   'llave-kirby': {
     name: 'Llavero Metal Kirby',
     price: '$19.99',
-    image: '/img/llave.jpeg',
+    image: 'img/llave.jpeg',
     description: 'Llavero de aleación metálica con acabado esmaltado de alta durabilidad.'
   }
 };
