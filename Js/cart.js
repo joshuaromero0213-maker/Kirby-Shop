@@ -38,7 +38,7 @@ if(carritoIds.length === 0){
                     <p>${producto.description}</p>
                     <p>Precio: ${producto.price}</p>
                 </div>
-                <button class="remove-btn" data-index="${index}">Eliminar</button>
+                <button class="remove-btn" data-index="${index}">Delete</button>
             </div>
             `;
         }

@@ -1,51 +1,51 @@
 const productsData = {
   'kirby-classic': {
-    name: 'Kirby-classic',
+    name: 'Kirby classic',
     price: '$9.99',
     image: 'img/KXC2-N4N1475293-medium_w640_h480_q75-peluchekirby1-1705939067.png',
-    description: 'Peluche clásico de Kirby de material ultrasuave, ideal para abrazar o decorar tu espacio gamer.'
+    description: 'Classic Kirby plush made of ultra-soft material—perfect for cuddling or decorating your gaming space..'
   },
   'kirby': {
-    name: 'Peluche Kirby Durmiendo',
+    name: 'Chill Kirby',
     price: '$4.99',
     image: 'img/ChatGPT-Image-Sep-25-2026-04_35_26-PM.png',
-    description: 'Edición especial de Kirby durmiendo placenteramente. Tamaño compacto para escritorio.'
+    description: 'Special edition of sleeping Kirby—perfect for cuddling or decorating your gaming space.'
   },
   'sleeping-kirby': {
-    name: 'Peluche Kirby Mini',
+    name: 'Cooking Kirby',
     price: '$9.99',
     image: 'img/images.jpeg',
-    description: 'Versión mini coleccionable de alta densidad, resistente a caídas y muy suave al tacto.'
+    description: 'Special edition of mini Kirby—perfect for cuddling or decorating your gaming space.'
   },
   'biggie-kirby': {
-    name: 'Peluche Kirby Gigante',
+    name: 'Big Kirby',
     price: '$19.99',
     image: 'img/biggie.jpeg',
-    description: 'Edición Biggie de gran tamaño. Funciona perfectamente como cojín o pieza central de colección.'
+    description: 'Special edition of big Kirby—perfect for cuddling or decorating your gaming space.'
   },
   'kirby-controller': {
-    name: 'Soporte Kirby Controller',
+    name: 'Kirby Controller',
     price: '$44.99',
     image: 'img/controller.jpg',
-    description: 'Soporte funcional diseñado para sostener tus mandos de consola o smartphone con los brazos de Kirby.'
+    description: 'Kirby controller perfect for holding your gaming controller.'
   },
-  'llavero-kirby': {
+  'Mini Kirby': {
     name: 'Llavero Peluche Kirby',
     price: '$19.99',
     image: 'img/llavero.jpeg',
-    description: 'Llavero con gancho metálico reforzado y minipeluche incorporado.'
+    description: 'Mini Kirby plush with keychain attachment.'
   },
-  'mesa-kirby': {
+  'Kirby': {
     name: 'Lámpara Mesa Kirby',
     price: '$19.99',
     image: 'img/mesa.webp',
-    description: 'Lámpara nocturna tenue con figura de Kirby, luz LED de bajo consumo recargable por USB.'
+    description: 'Kirby-themed table lamp with adjustable brightness and color settings.'
   },
-  'llave-kirby': {
+  'Kirby Key Ring': {
     name: 'Llavero Metal Kirby',
     price: '$19.99',
     image: 'img/llave.jpeg',
-    description: 'Llavero de aleación metálica con acabado esmaltado de alta durabilidad.'
+    description: 'Mini Kirby plush with keychain attachment.'
   }
 };
 

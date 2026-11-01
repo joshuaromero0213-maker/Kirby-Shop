@@ -35,7 +35,9 @@ p{
 }
 
 
-
+.btn-catalog{
+  visibility: hidden;
+}
 /* Capa de fondo para el patrón de Kirby */
 body::before {
   content: "";
