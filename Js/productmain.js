@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const product = typeof productsData !== 'undefined' ? productsData[productId] : null;
 
   if (product) {
-    document.getElementById('detail-image').src = product.image;
+
+    const imagePath = product.image.startsWith('../') ? product.image : '../' + product.image;
+    
+    document.getElementById('detail-image').src = imagePath;
     document.getElementById('detail-image').alt = product.name;
     document.getElementById('detail-title').textContent = product.name;
     document.getElementById('detail-price').textContent = product.price;
     document.getElementById('detail-description').textContent = product.description;
 
-    // 👈 Conexión agregada para el botón Comprar Ahora de la vista detalle
     const btnBuyDetail = document.getElementById('btn-buy-detail');
     if (btnBuyDetail) {
         btnBuyDetail.addEventListener('click', () => {

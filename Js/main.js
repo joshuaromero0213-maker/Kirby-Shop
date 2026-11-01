@@ -26,7 +26,7 @@ const productsData = {
   'kirby-controller': {
     name: 'Soporte Kirby Controller',
     price: '$44.99',
-    image: 'img/controller.jpeg',
+    image: 'img/controller.jpg',
     description: 'Soporte funcional diseñado para sostener tus mandos de consola o smartphone con los brazos de Kirby.'
   },
   'llavero-kirby': {

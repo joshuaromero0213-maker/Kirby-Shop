@@ -28,10 +28,11 @@ if(carritoIds.length === 0){
         const producto = typeof productsData !== 'undefined' ? productsData[id] : null;
         if(producto){
             const precioNumero = parseFloat(producto.price.replace('$', ''));
+            const imagePath = producto.image.startsWith('../') ? producto.image : '../' + producto.image;
             totalAcomulado += precioNumero;
             contenedorItems.innerHTML += `
             <div class="cart-item">
-                <img src="${producto.image}" alt="${producto.name}">
+                <img src="${imagePath}" alt="${producto.name}">
                 <div class="cart-item-details">
                     <h3>${producto.name}</h3>
                     <p>${producto.description}</p>
