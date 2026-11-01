@@ -1,0 +1,128 @@
+:root {
+  --backcolour: #bea2a2;
+  --btnclor: rgb(106, 75, 81);
+  --wht: #fff;
+  --pinkirby: #e791bf;
+  --whitekirby: #f7daea;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--pinkirby), var(--whitekirby));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif; /* 👈 Fuente base unificada */
+}
+h3{
+  text-align: center;
+  text-align: inter-word;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-image: url('../img/background.webp');
+  background-repeat: repeat;
+  background-size: 50px 50px;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Header */
+header, .header {
+  background-color: var(--backcolour);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.headerbtn {
+  background-color: var(--btnclor);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  color: var(--wht);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 👈 Tarjeta del Recibo (Subida con margin: 30px auto) */
+.receipt {
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo blanco tenue */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto 40px auto; /* 👈 Sube el recibo pegándolo más arriba */
+  position: relative;
+  z-index: 1;
+  color: var(--btnclor); /* 👈 Unifica el color de texto global en la tarjeta */
+}
+
+/* Unificación de tipografías dentro del recibo */
+.receipt h1 {
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+  color: var(--btnclor);
+}
+
+.receipt h2 {
+  font-size: 1.2rem;
+  margin: 20px 0 10px 0;
+  border-bottom: 2px dashed var(--btnclor);
+  padding-bottom: 5px;
+  color: var(--btnclor);
+}
+
+.receipt p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: var(--btnclor);
+}
+
+/* Estilos para la lista de compras inyectada dinámicamente */
+.receipt-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.receipt-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: var(--btnclor);
+}
+.headerbtn:hover{
+    background-color: var(--pinkirby);
+    color: var(--btnclor);
+    transform: scale(1.05);
+}
+
+.kirbydone {
+  align-self: center;
+  width: 150px;
+  mix-blend-mode: multiply;
+}

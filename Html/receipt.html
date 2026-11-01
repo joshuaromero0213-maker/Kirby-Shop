@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../Css/receipt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo - Kirby Shop</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="headerbtn" id="home-button">Home</a>
+    </header>
+
+    <div class="receipt">
+        <!-- 1. Encabezado de la factura -->
+        <div class="receipt-details">
+            <h1>Receipt</h1>
+            <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+            <p><strong>Date:</strong> <span id="date"></span></p>
+        </div>
+
+        <!-- 2. Lista de productos -->
+        <div class="receipt-items">
+            <h2>Items Purchased</h2>
+            <ul id="items-list"></ul>
+        </div>
+
+        <!-- 3. Total general -->
+        <div class="receipt-total" style="margin-top: 15px; border-top: 2px solid var(--btnclor); padding-top: 10px;">
+            <p style="font-size: 1.2rem; font-weight: bold; text-align: right;">
+                Total Amount: $<span id="total-amount">0.00</span>
+            </p>
+            <h3> < 3 THANKS FOR YOUR PURCHASE! < 3</h3>
+        </div>
+    </div>
+
+    <img  class="kirbydone" src="../Img/purchase-kirby.gif" alt="Kirby">
+
+    <script src="../Js/main.js"></script>
+    <script src="../Js/receipt.js"></script>
+</body>
+</html>

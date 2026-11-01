@@ -1,0 +1,34 @@
+<!-- En products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Css/productstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><button class='header__button'>Home</button></a>
+        <button class='header__button'>Catalog</button>
+         <a href="../Html/cart.html"><button class='header__button'>Cart</button></a>
+    </header>
+
+  <div class="product-detail-card">
+    <img id="detail-image" src="" alt="" class="product-detail__img">
+
+    <div class="product-detail__info">
+      <h2  class="product-info" id="detail-title"></h2>
+      <p class="product-info" id="detail-price"></p>
+        <button class="articlebtn articlebtn--large" id="btn-buy-detail">Comprar ahora</button>
+      <p class="product-info" id="detail-description"></p>
+      
+      
+    </div>
+  </div>
+
+  <!-- Cargar primero el objeto de productos y luego la lógica de renderizado -->
+  <script src="/Js/main.js"></script>
+  <script src="/Js/productmain.js"></script>
+</body>
+</html>

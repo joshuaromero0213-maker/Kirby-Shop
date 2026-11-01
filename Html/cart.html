@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../Css/cart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header class='header'> 
+        
+         <a href="../index.html"><button class='header__button' id="btn-home">Home</button></a>
+        <button class='header__button' id="btn-catalog">Catalog</button>
+
+                <!-- top menu -->
+    <nav class="catalog-menu" id="catalog-menu">
+        <a href="#" class="catalog-menu__link" data-category="peluches">Peluches</a>
+       
+        <a href="#" class="catalog-menu__link" data-category="juegos">Juegos</a>
+    </nav>
+    </header>
+
+    <div class="cart-container">
+        <h2>Carrito de Compras</h2>
+
+
+        <div id="cart-items" class="cart-items">
+            <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+             
+             </div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button id="checkout-button" class="checkout-button">Pagar</button>
+        </div>
+
+    </div>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/cart.js"></script>
+    
+</body>
+</html>

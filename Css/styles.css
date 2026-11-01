@@ -1,0 +1,198 @@
+/* ==========================================
+   1. VARIABLES (:root)
+   ========================================== */
+:root {
+  --backcolour: #bea2a2;
+  --btnclor: rgb(106, 75, 81);
+  --wht: #fff;
+  --pinkirby: #e791bf;
+  --whitekirby: #f7daea;
+}
+
+/* ==========================================
+   2. REGLAS GLOBALES Y RESET (*)
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   3. ETIQUETAS BASE (body, h1, a)
+   ========================================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--pinkirby), var(--whitekirby));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--wht);
+}
+
+/* ==========================================
+   4. HEADER Y COMPONENTES DE NAVEGACIÓN
+   ========================================== */
+header {
+  background-color: var(--backcolour);
+  width: 100%;
+  margin-top: 0;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 20px;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.gif {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.header__button {
+  background-color: var(--btnclor);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  color: var(--wht);
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Menú Desplegable (Catalog Dropdown) */
+.catalog-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--btnclor);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  z-index: 9;
+  border-radius: 0 0 10px 10px;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estado activo del menú */
+.catalog-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.catalog-menu__link {
+  color: var(--wht);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   5. CONTENIDO PRINCIPAL Y TARJETAS DE PRODUCTO
+   ========================================== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.product--list img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--btnclor);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Botones compartidos */
+.articlebtn, .buybtn {
+  background-color: var(--btnclor);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  color: var(--wht);
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.articlebtn--large {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 25px;
+}
+
+/* ==========================================
+   6. FOOTER
+   ========================================== */
+footer {
+  margin-top: auto;
+  background-color: var(--backcolour);
+  height: 45px;
+  width: 100%;
+}
+
+.footer--text {
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* ==========================================
+   7. ESTADOS HOVER (Agrupados para evitar duplicación)
+   ========================================== */
+.header__button:hover,
+.buybtn:hover,
+.articlebtn:hover,
+.articlebtn--large:hover {
+  background-color: var(--pinkirby);
+  color: var(--btnclor);
+  transform: scale(1.05);
+}
+
+.catalog-menu__link:hover {
+  background-color: var(--pinkirby);
+  color: var(--btnclor);
+}
+
+.product--list img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ==========================================
+   8. MEDIA QUERIES (Responsividad)
+   ========================================== */
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
