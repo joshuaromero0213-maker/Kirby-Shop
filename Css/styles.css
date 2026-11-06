@@ -37,9 +37,9 @@ a {
   color: var(--wht);
 }
 
-/* ==========================================
-   4. HEADER Y COMPONENTES DE NAVEGACIÓN
-   ========================================== */
+/* 
+   4. HEADER 
+*/
 header {
   background-color: var(--backcolour);
   width: 100%;
@@ -51,6 +51,17 @@ header {
   z-index: 10;
   position: sticky;
   top: 0;
+}
+
+.cart-badge {
+    background-color: var(--pinkirby);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 50%;
+    margin-left: 6px;
+    display: inline-block;
 }
 
 .gif {
@@ -70,7 +81,7 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
-/* Menú Desplegable (Catalog Dropdown) */
+/* Catalog Dropdown*/
 .catalog-menu {
   position: absolute;
   top: 100%;
@@ -90,7 +101,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Estado activo del menú */
+/* active menu */
 .catalog-menu.active {
   transform: translateY(0);
   opacity: 1;
@@ -106,9 +117,7 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ==========================================
-   5. CONTENIDO PRINCIPAL Y TARJETAS DE PRODUCTO
-   ========================================== */
+/* Product Container */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -127,7 +136,7 @@ header {
   transition: transform 0.3s ease;
 }
 
-/* Botones compartidos */
+/* Buttons */
 .articlebtn, .buybtn {
   background-color: var(--btnclor);
   border: none;
@@ -161,7 +170,7 @@ footer {
 }
 
 /* ==========================================
-   7. ESTADOS HOVER (Agrupados para evitar duplicación)
+   7. Hovers
    ========================================== */
 .header__button:hover,
 .buybtn:hover,
@@ -183,7 +192,7 @@ footer {
 }
 
 /* ==========================================
-   8. MEDIA QUERIES (Responsividad)
+   8. MEDIA QUERIES 
    ========================================== */
 @media (min-width: 600px) {
   .container {

@@ -49,12 +49,6 @@ const productsData = {
   }
 };
 
-function agregarAlCarrito(productId) {
-  let carrito = JSON.parse(localStorage.getItem('kirby_cart')) || [];
-  carrito.push(productId);
-  localStorage.setItem('kirby_cart', JSON.stringify(carrito));
-  alert('Producto agregado al carrito');
-}
 document.addEventListener('DOMContentLoaded', () => {
   const btnCatalog = document.getElementById('btn-catalog');
   const catalogMenu = document.getElementById('catalog-menu');
@@ -79,4 +73,44 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+});
+function actualizarContadorCarrito() {
+    const elementoContador = document.getElementById('cart-counter');
+    if (!elementoContador) return;
+
+    let carrito = JSON.parse(localStorage.getItem('kirby_cart')) || [];
+
+    const totalItems = carrito.reduce((total, item) => {
+        const cantidad = typeof item === 'object' ? item.quantity : 1;
+        return total + cantidad;
+    }, 0);
+
+    elementoContador.textContent = totalItems;
+}
+
+function agregarAlCarrito(productId) {
+    let carrito = JSON.parse(localStorage.getItem('kirby_cart')) || [];
+    carrito = carrito.map(item => typeof item === 'object' ? item : { id: item, quantity: 1 });
+
+    const productoExistente = carrito.find(item => item.id === productId);
+
+    if (productoExistente) {
+        productoExistente.quantity += 1;
+    } else {
+        carrito.push({ id: productId, quantity: 1 });
+    }
+
+    localStorage.setItem('kirby_cart', JSON.stringify(carrito));
+    
+    
+    actualizarContadorCarrito();
+    
+    alert('Producto agregado al carrito 🛒');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    actualizarContadorCarrito();
+
+    
 });

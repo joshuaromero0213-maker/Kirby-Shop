@@ -57,17 +57,17 @@ transition: background-color 0.3s ease, color 0.3s ease;
 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 90%; /* Ajusta el tamaño máximo según tus necesidades */
-  min-height: 100%; /* Ajusta el tamaño máximo según tus necesidades */
+  max-width: 90%; 
+  min-height: 100%; 
 
 
-  margin: auto; /* Centra la tarjeta en la página */
+  margin: auto; 
 }
 .product-detail__img{
 
-  width: 100%; /* Ajusta el tamaño máximo según tus necesidades */
+  width: 100%; 
 
- max-height: 500px; /* Ajusta el tamaño máximo según tus necesidades */
+ max-height: 500px; 
   border-radius: 10px;
   margin-bottom: 20px;
   border-top-left-radius: 10px;
@@ -86,7 +86,7 @@ transition: background-color 0.3s ease, color 0.3s ease;
 .product-detail__info p{
   font-size: 1.2rem;
   margin-bottom: 20px;
-  max-width: 600px; /* Limita el ancho del párrafo para mejor legibilidad */
+  max-width: 600px; 
 }
 .product-detail__info button{
   background-color: var(--btnclor);

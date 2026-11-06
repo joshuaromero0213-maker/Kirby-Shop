@@ -10,6 +10,7 @@
   box-sizing: border-box;
 }
 
+/*  Body Styles */
 
 body {
   margin: 0;
@@ -38,23 +39,8 @@ p{
 .btn-catalog{
   visibility: hidden;
 }
-/* Capa de fondo para el patrón de Kirby */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  
-  background-image: url('../img/background.webp'); /* Asegúrate de que la ruta sea correcta */
-  background-repeat: repeat;
-  background-size: 50px 50px; /* Ajusta el tamaño según qué tan tupido lo quieras */
-  
-  opacity: 0.15; /* 👈 Le da un efecto marca de agua súper suave (15% de opacidad) */
-  z-index: -1;   /* Lo manda detrás de todo el contenido */
-}
+/* Kirby Background Pattern */
+
 
 header{
 background-color: var(--backcolour);
@@ -65,7 +51,7 @@ justify-content: space-between;
 display: flex;
 padding: 10px 20px;
 z-index: 10;
-position: relative; /* Asegura que el header esté en el flujo normal del documento */
+position: relative;
 }
 
 
@@ -142,7 +128,7 @@ transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Estado visible al hacer clic */
+/* Visible status */
 .catalog-menu.active {
   transform: translateY(0);
   opacity: 1;
@@ -225,4 +211,22 @@ transition: background-color 0.3s ease, color 0.3s ease;
 .header__button:hover{
   background-color: var(--pinkirby);
   color: var(--btnclor);
+}
+
+/* Befores */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  
+  background-image: url('../img/background.webp'); 
+  background-repeat: repeat;
+  background-size: 50px 50px; 
+  
+  opacity: 0.15; 
+  z-index: -1;   
 }

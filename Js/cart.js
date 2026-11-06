@@ -17,29 +17,39 @@ const contenedorItems = document.getElementById('cart-items');
 const elementoTotal = document.getElementById('cart-total');
 const btnCheckout = document.getElementById('checkout-button');
 
-const carritoIds = JSON.parse(localStorage.getItem('kirby_cart')) || [];
-let totalAcomulado =0;
-if(carritoIds.length === 0){
-    contenedorItems.innerHTML='<p style="text-align:center;">Your cart is empty 🛒</p>';
+const cart = JSON.parse(localStorage.getItem('kirby_cart')) || [];
+let totalAcomulado = 0;
+
+if (cart.length === 0) {
+    contenedorItems.innerHTML = '<p style="text-align:center;">Your cart is empty 🛒</p>';
     elementoTotal.textContent = '0.00';
-}else{
+} else {
     contenedorItems.innerHTML = '';
-    carritoIds.forEach((id,index) => {
+
+    cart.forEach((item, index) => {
+        // Leemos id y cantidad directamente del objeto
+        const id = typeof item === 'object' ? item.id : item;
+        const cantidad = typeof item === 'object' ? item.quantity : 1;
+
         const producto = typeof productsData !== 'undefined' ? productsData[id] : null;
-        if(producto){
+
+        if (producto) {
             const precioNumero = parseFloat(producto.price.replace('$', ''));
+            const subtotal = precioNumero * cantidad;
+            totalAcomulado += subtotal;
+
             const imagePath = producto.image.startsWith('../') ? producto.image : '../' + producto.image;
-            totalAcomulado += precioNumero;
+
             contenedorItems.innerHTML += `
-            <div class="cart-item">
-                <img src="${imagePath}" alt="${producto.name}">
-                <div class="cart-item-details">
-                    <h3>${producto.name}</h3>
-                    <p>${producto.description}</p>
-                    <p>Precio: ${producto.price}</p>
+                <div class="cart-item">
+                    <img src="${imagePath}" alt="${producto.name}">
+                    <div class="cart-item-details">
+                        <h3>${producto.name}</h3>
+                        <p>${producto.description}</p>
+                        <p>Precio: ${producto.price} x ${cantidad} = $${subtotal.toFixed(2)}</p>
+                    </div>
+                    <button class="remove-btn" data-index="${index}">Delete</button>
                 </div>
-                <button class="remove-btn" data-index="${index}">Delete</button>
-            </div>
             `;
         }
     });
@@ -57,8 +67,8 @@ if(carritoIds.length === 0){
     elementoTotal.textContent = totalAcomulado.toFixed(2);
     if (btnCheckout) {
         btnCheckout.addEventListener('click', () => {
-            if(carritoIds.length === 0){
-                alert('TYour cart is empty. Please add items before proceeding to checkout.');
+            if(cart.length === 0){
+                alert('Your cart is empty. Please add items before proceeding to checkout.');
                 return;
             }
             localStorage.setItem('kirby_total_final', totalAcomulado.toFixed(2));
@@ -73,5 +83,23 @@ function removeItemFromCart(index) {
     location.reload();
 }
 
-});
+function addToCart(productId) {
+    
+    let cart = JSON.parse(localStorage.getItem('kirby_cart')) || [];
 
+  
+    cart = cart.map(item => typeof item === 'object' ? item : { id: item, quantity: 1 });
+
+    
+    const existingProduct = cart.find(item => item.id === productId);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1; 
+    } else {
+        cart.push({ id: productId, quantity: 1 }); 
+    }
+
+   
+    localStorage.setItem('kirby_cart', JSON.stringify(cart));
+}
+});
